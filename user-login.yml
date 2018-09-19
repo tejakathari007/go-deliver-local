@@ -1,1 +1,24 @@
-
+server:
+  port: "9074"
+spring:
+  application:
+    name: user-login
+  datasource:
+    url: jdbc:mysql://172.23.239.124:3306/go_d?useSSL=false
+    username: "root"
+    password: "root"
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+eureka:
+  client:
+    register-with-eureka: "true"
+    fetch-registry: "true"
+    serviceUrl:
+      defaultZone: http://172.23.239.100:9070/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
