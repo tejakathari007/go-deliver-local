@@ -1,1 +1,14 @@
-
+spring:
+  application:
+    name: payment-service
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+eureka:
+  client:
+    register-with-eureka: "true"
+    fetch-registry: "true"
+    service-url:
+      defaultZone: http://10.20.1.206:8761/eureka
