@@ -1,1 +1,21 @@
-
+spring:
+  application:
+    name: userprofile
+  data:
+    mongodb:
+      database: userprofile
+      host: 172.23.239.124
+      port: "27017"
+      uri: mongodb://172.23.239.124/userprofile
+      username: ""
+eureka:
+  client:
+    register-with-eureka: "true"
+    fetch-registry: "true"
+    service-url:
+      defaultZone: http://172.23.239.100:9070/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
