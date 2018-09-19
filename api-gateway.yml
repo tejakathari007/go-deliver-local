@@ -1,1 +1,35 @@
-
+spring:
+  application:
+    name: api-gateway
+  server:
+    port: "9072"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+zuul:
+  routes:
+    userprofile:
+      url: http://172.23.239.114:9073
+    user-login:
+      url: http://172.23.239.114:9074
+    recommendation:
+      url: http://172.23.239.114:9075
+    order:
+      url: http://172.23.239.121:9076
+    book:
+      url: http://172.23.239.114:9077
+    cvrp-ms:
+      url: http://172.23.239.123:9078
+    payment-service:
+      url: http://172.23.239.123:9079
+    logistics:
+      url: http://172.23.239.121:9080
+    
+eureka:
+  client:
+    register-with-eureka: "true"
+    fetch-registry: "true"
+    service-url:
+defaultZone: http://172.23.239.100:9070/eureka
