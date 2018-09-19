@@ -1,1 +1,21 @@
-
+spring:
+  application:
+    name: order  
+  data:
+    mongodb:
+      database: order-details
+      host: 10.20.1.97
+      port: "27017"
+      uri: mongodb://10.20.1.97/order-details
+      username: ""
+eureka:
+  client:
+    register-with-eureka: "true"
+    fetch-registry: "true"
+    service-url:
+      defaultZone: http://10.20.1.206:9070/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
