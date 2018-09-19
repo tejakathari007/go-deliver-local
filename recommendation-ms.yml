@@ -5,7 +5,7 @@ spring:
     neo4j:
       username: neo4j
       password: godeliver@12
-      uri: bolt://10.20.1.97
+      uri: bolt://172.23.239.124
   application:
     name: recommendation
 management:
@@ -16,6 +16,6 @@ management:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://10.20.1.206:9070/eureka
+      defaultZone: http://172.23.239.100:9070/eureka
     register-with-eureka: "true"
     fetch-registry: "true"
